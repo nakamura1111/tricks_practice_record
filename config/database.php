@@ -42,7 +42,7 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-        // データベースの作成方法：https://qiita.com/hitochan/items/f5dc22ecbe24a350276a
+        // データベースの作成方法： https://qiita.com/hitochan/items/f5dc22ecbe24a350276a
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
