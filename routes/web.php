@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', 'App\Http\Controllers\CalendarController@show');        // ルーティング設定の注意点(namespace)：https://qiita.com/norichintnk/items/34a04cd17bfe4014313a
