@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', 'App\Http\Controllers\CalendarController@show');        // ルーティング設定の注意点(namespace)：https://qiita.com/norichintnk/items/34a04cd17bfe4014313a
+
+Route::resource('category', 'App\Http\Controllers\CategoryController', ['only' => ['index', 'create', 'store']] );
+
